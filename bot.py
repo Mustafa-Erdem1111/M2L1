@@ -58,7 +58,32 @@ def get_duck_image_url():
 async def duck(ctx):
     '''duck komutunu çağırdığımızda, program ordek_resmi_urlsi_al fonksiyonunu çağırır.'''
     image_url = get_duck_image_url()
-    await ctx.send(image_url)    
+    await ctx.send(image_url)   
+    
+@bot.command()
+async def animal(ctx):
+    with open('images/animal1.jpg', 'rb') as f:
+        # Dönüştürülen Discord kütüphane dosyasını bu değişkende saklayalım!
+        picture = discord.File(f)
+   # Daha sonra bu dosyayı bir parametre olarak gönderebiliriz!
+    await ctx.send(file=picture)
+
+@bot.command()
+async def animal2(ctx):
+    with open('images/animal2.jpg', 'rb') as f:
+        # Dönüştürülen Discord kütüphane dosyasını bu değişkende saklayalım!
+        picture = discord.File(f)
+   # Daha sonra bu dosyayı bir parametre olarak gönderebiliriz!
+    await ctx.send(file=picture)
+
+
+@bot.command()
+async def animal3(ctx):
+    with open('images/animal3.png', 'rb') as f:
+        # Dönüştürülen Discord kütüphane dosyasını bu değişkende saklayalım!
+        picture = discord.File(f)
+   # Daha sonra bu dosyayı bir parametre olarak gönderebiliriz!
+    await ctx.send(file=picture)
 
 
 
